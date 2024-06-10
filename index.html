@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1>Headphone Store</h1>
+    <a href="{{ url_for('add_headphone') }}">Add Headphone</a>
+    <ul>
+      {% for headphone in headphones %}
+        <li>{{ headphone.name }} - ${{ headphone.price }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
